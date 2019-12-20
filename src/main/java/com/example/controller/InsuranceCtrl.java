@@ -36,13 +36,13 @@ public class InsuranceCtrl {
 
 
     /**
-    * @Description 招采初始化页面
-    * @Date 2019/12/16 15:54
-    * @return
-    * @Author FanJiangFeng
-    * @Version1.0
-    * @History
-    */
+     * @Description 招采初始化页面
+     * @Date 2019/12/16 15:54
+     * @return
+     * @Author FanJiangFeng
+     * @Version1.0
+     * @History
+     */
     @RequestMapping("/enterPage")
     public String yemian(){
         return "test";
@@ -68,7 +68,37 @@ public class InsuranceCtrl {
         String requestData = getRequestData(plainData);
 
         //###############第三步，发送远程请求############
-        String responseData = sendPostReq(requestData);
+        String responseData = sendPostReq(requestData,"http://127.0.0.1:7000/tbbx/insurance/enter");
+
+        //############第四步，得到反馈信息##############
+        String contentData = getContentData(responseData);
+        if("false".equals(contentData)){
+            JSONObject jsonObject = JSONObject.parseObject(responseData);
+            return jsonObject;
+        }
+
+
+        //#############第五步，解密反馈信息并返回############
+        String decryptString = decryptData(contentData);
+        JSONObject jsonObject = JSONObject.parseObject(decryptString);
+        return jsonObject;
+
+    }
+
+    @RequestMapping("/bidopen")
+    @ResponseBody
+    public JSONObject sendBidOpen() throws Exception{
+
+
+        String appid = "18838030468";
+        //##########第一步，封装基础信息##########
+        String plainData = getBidOpenData();
+
+        //########加密和签名##########
+        String requestData = getRequestData(plainData);
+
+        //###############第三步，发送远程请求############
+        String responseData = sendPostReq(requestData,"http://127.0.0.1:7000/tbbx/insurance/bidopen");
 
         //############第四步，得到反馈信息##############
         String contentData = getContentData(responseData);
@@ -86,13 +116,13 @@ public class InsuranceCtrl {
     }
 
     /**
-    * @Description  解密信息并返回
-    * @Date 2019/12/18 15:26
-    * @return
-    * @Author FanJiangFeng
-    * @Version1.0
-    * @History
-    */
+     * @Description  解密信息并返回
+     * @Date 2019/12/18 15:26
+     * @return
+     * @Author FanJiangFeng
+     * @Version1.0
+     * @History
+     */
     public String decryptData(String encryptData) throws Exception {
         JSONObject jsonObject = JSONObject.parseObject(encryptData);
         String encryptParam=(String) jsonObject.get("encryptParam");
@@ -119,13 +149,13 @@ public class InsuranceCtrl {
     }
 
     /**
-    * @Description  得到反馈信息
-    * @Date 2019/12/18 15:22
-    * @return
-    * @Author FanJiangFeng
-    * @Version1.0
-    * @History
-    */
+     * @Description  得到反馈信息
+     * @Date 2019/12/18 15:22
+     * @return
+     * @Author FanJiangFeng
+     * @Version1.0
+     * @History
+     */
     public String getContentData(String responseData){
         JSONObject jsonObject = JSONObject.parseObject(responseData);
         Integer status = (Integer) jsonObject.get("status");
@@ -135,19 +165,19 @@ public class InsuranceCtrl {
             String content = jsonObject1.toJSONString();
             return content;
         }else if(status==500){
-           return "false";
+            return "false";
         }
         return "";
     }
 
     /**
-    * @Description 加密和签名公共方法
-    * @Date 2019/12/18 15:18
-    * @return
-    * @Author FanJiangFeng
-    * @Version1.0
-    * @History
-    */
+     * @Description 加密和签名公共方法
+     * @Date 2019/12/18 15:18
+     * @return
+     * @Author FanJiangFeng
+     * @Version1.0
+     * @History
+     */
     public Map jmqm(String jcxx) throws Exception {
         PublicKey publicKey = RSAUtil.string2PublicKey(thirdPublicKey);
         //加密后的字符串
@@ -179,13 +209,13 @@ public class InsuranceCtrl {
     }
 
     /**
-    * @Description 封装基础信息
-    * @Date 2019/12/16 15:53
-    * @return String  json串
-    * @Author FanJiangFeng
-    * @Version1.0
-    * @History
-    */
+     * @Description 封装基础信息
+     * @Date 2019/12/16 15:53
+     * @return String  json串
+     * @Author FanJiangFeng
+     * @Version1.0
+     * @History
+     */
     public String getPlainData() throws Exception {
         //基础信息
         String appid = "18838030468";        //接入机构ID唯一标识
@@ -195,9 +225,9 @@ public class InsuranceCtrl {
 
         //业务字段
         //唯一编号（代表投标人在投标业务中的唯一标识）
-        String ddbh=this.getUUID();
+        String ddbh="5c1b1691958a41878dbfe55a931e2165";
         //项目名称
-        String projectName="测试项目";
+        String projectName="测试项目-大刚";
         //项目编号
         String projectCode="No.1";
         //招标项目名称
@@ -272,20 +302,84 @@ public class InsuranceCtrl {
         return reqJson;
     }
 
+    public String getBidOpenData() throws Exception {
+        //基础信息
+        String appid = "18838030468";        //接入机构ID唯一标识
+        String transId="Test";               //交易名称
+        long time = new Date().getTime();    //时间戳
+        String businessId=this.getUUID();    //业务流水号 （这里UUID模拟）
+
+        //业务字段
+        //项目名称
+        String projectName="测试项目";
+        //项目编号
+        String projectCode="No.1";
+        //招标项目名称
+        String tenderProjectName="招标测试项目";
+        //招标项目编号
+        String tenderProjectCode="Number.1";
+        //标段（包）名称
+        String bidSectionName="测试标段（包）";
+        //标段（包）编号
+        String bidSectionCode="bd_No.1";
+        //开标状态及结果
+        String kbztjg="Y";
+        //中标人名称
+        String bidWinnerName="袁梦阳";
+        //中标人社会信用代码
+        String bidWinnerShxydm="crxyhhdl";
+        //中标人证件类型   （选填）
+        String bidWinnerCodeType="身份证";
+        //中标人证件号码   （选填）
+        String bidWinnerCode="410633844099543761";
+        //实际开标时间
+        Date sjkbsj = new Date();
+        //数据同步日期
+        Date sjtbrq = new Date();
+
+        //把基础信息和业务字段放到map中
+        Map head=new HashMap();
+        head.put("appid",appid);
+        head.put("transId",transId);
+        head.put("time",time);
+        head.put("businessId",businessId);
+        Map data=new HashMap();
+        data.put("projectName",projectName);
+        data.put("projectCode",projectCode);
+        data.put("tenderProjectName",tenderProjectName);
+        data.put("tenderProjectCode",tenderProjectCode);
+        data.put("bidSectionName",bidSectionName);
+        data.put("bidSectionCode",bidSectionCode);
+        data.put("kbztjg",kbztjg);
+        data.put("bidWinnerName",bidWinnerName);
+        data.put("bidWinnerShxydm",bidWinnerShxydm);
+        data.put("bidWinnerCodeType",bidWinnerCodeType);
+        data.put("bidWinnerCode",bidWinnerCode);
+        data.put("sjkbsj",sjkbsj);
+        data.put("sjtbrq",sjtbrq);
+        Map allMessage=new HashMap();
+        allMessage.put("head",head);
+        allMessage.put("data",data);
+
+        //将map转成json
+        String reqJson = JSONObject.toJSONString(allMessage);
+
+        return reqJson;
+    }
+
 
 
 
     /**
-    * @Description  发送远程请求，进入投标保险首页
-    * @Date 2019/12/16 15:57
-    * @return
-    * @Author FanJiangFeng
-    * @Version1.0
-    * @History
-    */
-    public String sendPostReq(String requestData) throws IOException {
+     * @Description  发送远程请求，进入投标保险首页
+     * @Date 2019/12/16 15:57
+     * @return
+     * @Author FanJiangFeng
+     * @Version1.0
+     * @History
+     */
+    public String sendPostReq(String requestData,String url) throws IOException {
         RestTemplate restTemplate = new RestTemplate();
-        String url = "http://127.0.0.1:7000/tbbx/insurance/enter";
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
         MultiValueMap<String, String> map= new LinkedMultiValueMap<>();
@@ -299,11 +393,11 @@ public class InsuranceCtrl {
 
 
 
-   public String getUUID() {
-       UUID uuid = UUID.randomUUID();
-       String s = uuid.toString();
-       String replace = s.replace("-", "");
-       System.out.println("随机数：" + replace);
-       return replace;
-   }
+    public String getUUID() {
+        UUID uuid = UUID.randomUUID();
+        String s = uuid.toString();
+        String replace = s.replace("-", "");
+        System.out.println("随机数：" + replace);
+        return replace;
+    }
 }

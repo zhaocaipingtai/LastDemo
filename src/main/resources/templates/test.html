@@ -8,6 +8,7 @@
 <body>
 <h1>测试第三方项目向保险项目请求办理业务测试</h1>
 <input id="button" type="button" value="点击按钮发送请求">
+<input id="bidOpen" type="button" value="同步开标信息">
 
 
 
@@ -23,10 +24,26 @@
                     console.log(JSON.stringify(data));
                     if(data.message=="success") {    //请求成功
                         window.open(data.redirect_url);
-
-
+                    } else if(data.message=="error"){
+                        alert(data.remark)
                     }
-        }
+                }
+            });
+
+        });
+
+        $("#bidOpen").click(function () {
+
+            $.ajax({
+                url:"/tbbx/bidopen",
+                dataType:"json",
+                type:"post",
+                success:function (data) {
+                    console.log(JSON.stringify(data));
+                    if (data.flag == "1"){
+                        alert("成功")
+                    }
+                }
             });
 
         });
