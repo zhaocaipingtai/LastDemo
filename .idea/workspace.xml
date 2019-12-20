@@ -1,0 +1,840 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6ae203b8-926a-4dbd-8673-c82306a05c7f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/BdStatusCtrl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/CustomRealm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/HttpController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/IniRealmTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/JdbcRealmTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/ShiroController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/UserRealm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/testcontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/InsuranceCtrl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pojo/ApiResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pojo/BusinessData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pojo/BusinessPojo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pojo/BusinessResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pojo/EncryptData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pojo/ExceptionInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pojo/KeyCorrelation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pojo/ProviderResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/shiro/ShiroConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/shiro/ShiroController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/util/Cfp3desUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/util/DataDecryptUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/util/DataEncryptUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/util/MD5Util.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/util/RSAUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/util/RSAUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/util/rsa/RSATest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/util/rsa/RSAUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/http.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/update.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/user.ini" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="413821580">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="24" />
+          <entry key="project.open.time.0" value="10" />
+          <entry key="project.open.time.1" value="7" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.6" value="2" />
+          <entry key="project.open.time.7" value="3" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="25" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="class" value="31" />
+          <entry key="html" value="16" />
+          <entry key="ini" value="1" />
+          <entry key="java" value="104" />
+          <entry key="js" value="1" />
+          <entry key="pom" value="1" />
+          <entry key="properties" value="6" />
+          <entry key="xml" value="12" />
+          <entry key="yml" value="15" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="31" />
+          <entry key="HTML" value="16" />
+          <entry key="JAVA" value="104" />
+          <entry key="JavaScript" value="1" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Properties" value="6" />
+          <entry key="XML" value="13" />
+          <entry key="YAML" value="15" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="html" value="1038" />
+          <entry key="ini" value="54" />
+          <entry key="java" value="15019" />
+          <entry key="properties" value="38" />
+          <entry key="txt" value="29" />
+          <entry key="xml" value="264" />
+          <entry key="yml" value="41" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="1038" />
+          <entry key="JAVA" value="15019" />
+          <entry key="PLAIN_TEXT" value="83" />
+          <entry key="Properties" value="38" />
+          <entry key="XML" value="264" />
+          <entry key="YAML" value="41" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/controller/BdStatusCtrl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="50" column="70" lean-forward="true" selection-start-line="50" selection-start-column="70" selection-end-line="50" selection-end-column="70" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>url</find>
+      <find>spliceObjAttributes</find>
+      <find>allMessage</find>
+      <find>jsonObject2</find>
+      <find>lombok</find>
+      <find>sign</find>
+      <find>getPrivateKeyStr</find>
+      <find>getPublicKeyStr</find>
+      <find>string2PublicKey</find>
+      <find>string2PrivateKey</find>
+      <find>handleData</find>
+      <find>verifySign</find>
+      <find>cfp3des</find>
+      <find>jmqm</find>
+      <find>mwAppid</find>
+      <find>KEY_ALGORITHM</find>
+      <find>algorithm</find>
+      <find>encrypt</find>
+      <find>encryptedAttributesData</find>
+      <find>signAlgorithm</find>
+      <find>decryptBase64</find>
+      <find>ENCRYPT_MODE</find>
+      <find>cipher.getMyPrivateKey()</find>
+      <find>decrypt</find>
+      <find>rsaEncry</find>
+      <find>encryptAlgorithm</find>
+      <find>RSA/ECB/PKCS1Padding</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>appid</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/example/lalala/LalalaApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/pojo/EncryptData.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/util/rsa/RSATest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/util/DataEncryptUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/util/rsa/RSAUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/util/DataDecryptUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/http.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/controller/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/controller/HttpController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/controller/ShiroController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/user.ini" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/controller/JdbcRealmTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/controller/IniRealmTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/controller/CustomRealm.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/add.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/update.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/login.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/shiro/ShiroController.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/shiro/ShiroConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/controller/UserRealm.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/controller/testcontroller.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/util/RSAUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/test.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/controller/InsuranceCtrl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/controller/BdStatusCtrl.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JRebelWorkspace">
+    <option name="jrebelEnabledAutocompile" value="true" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\maven-repository" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="lalala" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-10" />
+    <option name="width" value="1945" />
+    <option name="height" value="1105" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="lalala" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lalala" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lalala" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lalala" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lalala" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lalala" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lalala" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lalala" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lalala" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lalala" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lalala" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lalala" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lalala" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lalala" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lalala" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lalala" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lalala" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lalala" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lalala" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lalala" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SearchEverywhereHistoryKey" value="workspace&#9;FILE&#9;file://D:/IdeaProjects/lalala/.idea/workspace.xml" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1576758775180" />
+    <property name="last_opened_file_path" value="D:/工作/tbbx-server/trunk" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.controller" />
+      <recent name="com.example.util" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IdeaProjects\lalala\src\main\java\com\example\util" />
+      <recent name="D:\IdeaProjects\lalala\src\main\java\com\example\util\rsa" />
+      <recent name="D:\IdeaProjects\lalala\src\main\java\com\example" />
+      <recent name="D:\IdeaProjects\lalala\src\main\resources\static" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.LalalaApplication">
+    <configuration name="InsuranceCtrl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.controller.InsuranceCtrl" />
+      <module name="lalala" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IniRealmTest.testAuthentication" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lalala" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.example.controller.IniRealmTest" />
+      <option name="METHOD_NAME" value="testAuthentication" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JdbcRealmTest.testAuthentication" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lalala" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.example.controller.JdbcRealmTest" />
+      <option name="METHOD_NAME" value="testAuthentication" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShiroController.testAuthentication" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lalala" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.example.controller.ShiroController" />
+      <option name="METHOD_NAME" value="testAuthentication" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LalalaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="lalala" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.lalala.LalalaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.LalalaApplication" />
+      <item itemvalue="Application.InsuranceCtrl" />
+      <item itemvalue="JUnit.ShiroController.testAuthentication" />
+      <item itemvalue="JUnit.IniRealmTest.testAuthentication" />
+      <item itemvalue="JUnit.JdbcRealmTest.testAuthentication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.InsuranceCtrl" />
+        <item itemvalue="JUnit.IniRealmTest.testAuthentication" />
+        <item itemvalue="JUnit.JdbcRealmTest.testAuthentication" />
+        <item itemvalue="JUnit.ShiroController.testAuthentication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6ae203b8-926a-4dbd-8673-c82306a05c7f" name="Default Changelist" comment="" />
+      <created>1574676103705</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1574676103705</updated>
+      <workItem from="1574676108488" duration="698000" />
+      <workItem from="1574824901222" duration="20000" />
+      <workItem from="1575357592111" duration="10974000" />
+      <workItem from="1575420468937" duration="17744000" />
+      <workItem from="1575506999977" duration="9028000" />
+      <workItem from="1575593390954" duration="668000" />
+      <workItem from="1575713942480" duration="1122000" />
+      <workItem from="1575853731453" duration="1163000" />
+      <workItem from="1575871672944" duration="23629000" />
+      <workItem from="1575938484507" duration="24033000" />
+      <workItem from="1576026436025" duration="18183000" />
+      <workItem from="1576050843305" duration="6291000" />
+      <workItem from="1576068994641" duration="975000" />
+      <workItem from="1576112116509" duration="2571000" />
+      <workItem from="1576125931738" duration="2460000" />
+      <workItem from="1576140028066" duration="998000" />
+      <workItem from="1576232048241" duration="8005000" />
+      <workItem from="1576286179169" duration="151000" />
+      <workItem from="1576292163514" duration="14551000" />
+      <workItem from="1576481526609" duration="12752000" />
+      <workItem from="1576545588956" duration="19141000" />
+      <workItem from="1576630730459" duration="29040000" />
+      <workItem from="1576716614934" duration="3079000" />
+      <workItem from="1576724315430" duration="181000" />
+      <workItem from="1576735941464" duration="13920000" />
+    </task>
+    <task id="LOCAL-00001" summary="测试类">
+      <created>1575960915630</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1575960915630</updated>
+    </task>
+    <task id="LOCAL-00002" summary="按照接口文档完善接口">
+      <created>1575972696888</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1575972696888</updated>
+    </task>
+    <task id="LOCAL-00003" summary="commit">
+      <created>1576048739662</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1576048739662</updated>
+    </task>
+    <task id="LOCAL-00004" summary="commit">
+      <created>1576057168569</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1576057168569</updated>
+    </task>
+    <task id="LOCAL-00005" summary="commit">
+      <created>1576309922055</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1576309922055</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="JdbcRealmTest_testAuthentication - 2019.12.13 at 19h 50m 01s.xml">
+      <configuration name="JdbcRealmTest.testAuthentication" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IniRealmTest_testAuthentication - 2019.12.13 at 20h 11m 45s.xml">
+      <configuration name="IniRealmTest.testAuthentication" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IniRealmTest_testAuthentication - 2019.12.13 at 20h 12m 19s.xml">
+      <configuration name="IniRealmTest.testAuthentication" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IniRealmTest_testAuthentication - 2019.12.13 at 20h 21m 10s.xml">
+      <configuration name="IniRealmTest.testAuthentication" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IniRealmTest_testAuthentication - 2019.12.13 at 20h 21m 44s.xml">
+      <configuration name="IniRealmTest.testAuthentication" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IniRealmTest_testAuthentication - 2019.12.13 at 20h 21m 52s.xml">
+      <configuration name="IniRealmTest.testAuthentication" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IniRealmTest_testAuthentication - 2019.12.14 at 11h 05m 29s.xml">
+      <configuration name="IniRealmTest.testAuthentication" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IniRealmTest_testAuthentication - 2019.12.14 at 11h 05m 42s.xml">
+      <configuration name="IniRealmTest.testAuthentication" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IniRealmTest_testAuthentication - 2019.12.14 at 11h 06m 04s.xml">
+      <configuration name="IniRealmTest.testAuthentication" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IniRealmTest_testAuthentication - 2019.12.14 at 11h 59m 09s.xml">
+      <configuration name="IniRealmTest.testAuthentication" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="221377000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20576407" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="JRebel" order="3" side_tool="true" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info id="Web" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32956153" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.16713881" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49932975" weight="0.34468085" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3286119" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="13" weight="0.58498585" />
+      <window_info anchor="bottom" id="JRebel Executor" order="14" />
+      <window_info anchor="bottom" id="JRebel Console" order="15" sideWeight="0.50067025" side_tool="true" weight="0.24680851" />
+      <window_info anchor="bottom" id="Problems" order="16" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" weight="0.3297587" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="测试类" />
+    <MESSAGE value="按照接口文档完善接口" />
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>DataEncryptUtil.encryptData(reqJson,keyCorrelation)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>EncryptData</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>attributesMap.get(key)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/pojo/BusinessPojo.java" />
+    <entry file="jar://D:/maven-repository/org/springframework/spring-context/5.2.1.RELEASE/spring-context-5.2.1.RELEASE.jar!/org/springframework/stereotype/Controller.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="17" column="10" lean-forward="true" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/maven-repository/org/springframework/spring-core/5.2.1.RELEASE/spring-core-5.2.1.RELEASE.jar!/org/springframework/util/MultiValueMap.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/maven-repository/org/apache/httpcomponents/httpcore/4.4.12/httpcore-4.4.12.jar!/org/apache/http/HttpEntity.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/jre/lib/ext/sunjce_provider.jar!/com/sun/crypto/provider/RSACipher.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="242" selection-start-line="242" selection-end-line="242" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/util/rsa/RSATest.java" />
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/controller/User.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/controller/HttpController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/user.ini" />
+    <entry file="jar://D:/maven-repository/org/apache/shiro/shiro-core/1.2.3/shiro-core-1.2.3-sources.jar!/org/apache/shiro/realm/jdbc/JdbcRealm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="73" column="7" lean-forward="true" selection-start-line="73" selection-start-column="7" selection-end-line="73" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/controller/JdbcRealmTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/controller/IniRealmTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/http.html" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/add.html" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/update.html" />
+    <entry file="jar://D:/maven-repository/org/apache/shiro/shiro-core/1.2.3/shiro-core-1.2.3-sources.jar!/org/apache/shiro/authc/UsernamePasswordToken.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4085">
+          <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/maven-repository/org/apache/shiro/shiro-core/1.2.3/shiro-core-1.2.3-sources.jar!/org/apache/shiro/subject/support/DelegatingSubject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-953">
+          <caret line="259" column="27" lean-forward="true" selection-start-line="259" selection-start-column="27" selection-end-line="259" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/maven-repository/org/apache/shiro/shiro-core/1.2.3/shiro-core-1.2.3-sources.jar!/org/apache/shiro/subject/Subject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="332" column="9" selection-start-line="332" selection-start-column="9" selection-end-line="332" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/controller/CustomRealm.java" />
+    <entry file="file://D:/maven-repository/com/github/theborakompanioni/thymeleaf-extras-shiro/2.0.0/thymeleaf-extras-shiro-2.0.0.pom">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1026" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="100" column="21" lean-forward="true" selection-start-line="100" selection-start-column="21" selection-end-line="100" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/controller/UserRealm.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/shiro/ShiroConfig.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.html" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/controller/ShiroController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="184" selection-start-line="13" selection-start-column="184" selection-end-line="13" selection-end-column="184" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/shiro/ShiroController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/util/Cfp3desUtil.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/security/Key.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="101" column="17" selection-start-line="101" selection-start-column="17" selection-end-line="101" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/pojo/EncryptData.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/security/PrivateKey.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="58" column="39" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/jre/lib/jce.jar!/javax/crypto/Cipher.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3438">
+          <caret line="49" column="40" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/maven-repository/org/springframework/spring-webmvc/5.2.1.RELEASE/spring-webmvc-5.2.1.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="516" column="27" selection-start-line="516" selection-start-column="27" selection-end-line="516" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/maven-repository/org/springframework/spring-webmvc/5.2.1.RELEASE/spring-webmvc-5.2.1.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="396" column="19" selection-start-line="396" selection-start-column="19" selection-end-line="396" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/maven-repository/org/springframework/spring-webmvc/5.2.1.RELEASE/spring-webmvc-5.2.1.RELEASE.jar!/org/springframework/web/servlet/FrameworkServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="518" selection-start-line="518" selection-end-line="518" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/maven-repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.27/tomcat-embed-core-9.0.27.jar!/org/apache/catalina/core/ApplicationFilterChain.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="119" selection-start-line="119" selection-end-line="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/maven-repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar!/ch/qos/logback/classic/Logger.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="441" selection-start-line="441" selection-end-line="441" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/util/MD5Util.java" />
+    <entry file="jar://D:/maven-repository/org/springframework/spring-web/5.2.1.RELEASE/spring-web-5.2.1.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="106" selection-start-line="106" selection-end-line="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/util/DataDecryptUtil.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/util/DataEncryptUtil.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/util/rsa/RSAUtils.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/pojo/BusinessResponse.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/pojo/KeyCorrelation.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/util/RSAUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="25" column="53" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/controller/InsuranceCtrl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2718">
+          <caret line="174" column="39" lean-forward="true" selection-start-line="174" selection-start-column="39" selection-end-line="174" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/controller/BdStatusCtrl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="50" column="70" lean-forward="true" selection-start-line="50" selection-start-column="70" selection-end-line="50" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
