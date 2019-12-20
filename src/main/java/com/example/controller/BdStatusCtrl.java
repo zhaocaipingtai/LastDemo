@@ -29,7 +29,7 @@ public class BdStatusCtrl {
     /**
     * @Description 保险平台推送过来保单状态信息并反馈信息
     * @Date 2019/12/19 16:18
-    * @param 接收的数据  加入github版本控制
+    * @param 接收的数据  加入github版本控制hhh
     * @return   json
     * @Author FanJiangFeng
     * @Version1.0
