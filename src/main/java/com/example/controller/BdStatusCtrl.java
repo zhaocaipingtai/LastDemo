@@ -20,7 +20,7 @@ import java.util.Map;
  */
 @Slf4j
 @Controller
-@RequestMapping("/tbbx")
+@RequestMapping("/bdStatus")
 public class BdStatusCtrl {
 
     @Autowired

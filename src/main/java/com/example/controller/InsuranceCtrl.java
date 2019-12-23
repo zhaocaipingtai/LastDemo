@@ -242,7 +242,9 @@ public class InsuranceCtrl {
         //投标保证金金额
         BigDecimal tbbzjje=new BigDecimal("100000.25");
         //开标日期
-        Date bidOpenTime=new Date();
+        Date openTime=new Date();
+        SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyyMMddHHmmss");
+        String bidOpenTime = simpleDateFormat.format(openTime);
         //招标人名称
         String tendererName="樊江锋";
         //招标人社会信用代码
@@ -252,9 +254,9 @@ public class InsuranceCtrl {
         //招标人证件号码    （选填）
         String tendererCode="410622199703045010";
         //招标人地址
-        String tendererAddress="河南省郑州市金水区";
+        String tendererAddress="";
         //招标人联系电话
-        String tendererPhoneNumber="18838030468";
+        String tendererPhoneNumber="";
         //投标人名称
         String bidderName="袁梦阳";
         //投标人社会信用代码
@@ -264,7 +266,8 @@ public class InsuranceCtrl {
         //投标人证件号码   （选填）
         String bidderCode="410633844099543761";
         //投保申请日期
-        Date tbsqrq=new Date();
+        Date format=new Date();
+        String tbsqrq = simpleDateFormat.format(format);
 
         //把基础信息和业务字段放到map中
         Map head=new HashMap();
