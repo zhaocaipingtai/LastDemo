@@ -20,6 +20,7 @@ import org.springframework.web.client.RestTemplate;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.security.*;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 @Slf4j
@@ -307,7 +308,7 @@ public class InsuranceCtrl {
         String appid = "18838030468";        //接入机构ID唯一标识
         String transId="Test";               //交易名称
         long time = new Date().getTime();    //时间戳
-        String businessId=this.getUUID();    //业务流水号 （这里UUID模拟）
+        String businessId="5c1b1691958a41878dbfe55a931e2165";    //业务流水号 （这里UUID模拟）
 
         //业务字段
         //项目名称
@@ -337,6 +338,12 @@ public class InsuranceCtrl {
         //数据同步日期
         Date sjtbrq = new Date();
 
+        SimpleDateFormat sdf=new SimpleDateFormat("yyyyMMddHHmmss");
+
+        String str_sjkbrq = sdf.format(sjkbsj);
+
+        String str_sjtbrq = sdf.format(sjtbrq);
+
         //把基础信息和业务字段放到map中
         Map head=new HashMap();
         head.put("appid",appid);
@@ -355,8 +362,8 @@ public class InsuranceCtrl {
         data.put("bidWinnerShxydm",bidWinnerShxydm);
         data.put("bidWinnerCodeType",bidWinnerCodeType);
         data.put("bidWinnerCode",bidWinnerCode);
-        data.put("sjkbsj",sjkbsj);
-        data.put("sjtbrq",sjtbrq);
+        data.put("sjkbsj",str_sjkbrq);
+        data.put("sjtbrq",str_sjtbrq);
         Map allMessage=new HashMap();
         allMessage.put("head",head);
         allMessage.put("data",data);
