@@ -69,7 +69,7 @@ public class InsuranceCtrl {
         String requestData = getRequestData(plainData);
 
         //###############第三步，发送远程请求############
-        String responseData = sendPostReq(requestData,"http://127.0.0.1:7000/tbbx/insurance/enter");
+        String responseData = sendPostReq(requestData,"http://127.0.0.1:8000/tbbx-server/tbbx/insurance/enter");
 
         //############第四步，得到反馈信息##############
         String contentData = getContentData(responseData);
@@ -99,7 +99,7 @@ public class InsuranceCtrl {
         String requestData = getRequestData(plainData);
 
         //###############第三步，发送远程请求############
-        String responseData = sendPostReq(requestData,"http://127.0.0.1:7000/tbbx/insurance/bidopen");
+        String responseData = sendPostReq(requestData,"http://127.0.0.1:8000/tbbx-server/tbbx/insurance/bidopen");
 
         //############第四步，得到反馈信息##############
         String contentData = getContentData(responseData);

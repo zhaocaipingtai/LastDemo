@@ -22,7 +22,7 @@
                 type:"post",
                 success:function (data) {
                     console.log(JSON.stringify(data));
-                    if(data.message=="success") {    //请求成功
+                    if(data.remark=="success") {    //请求成功
                         window.open(data.redirect_url);
                     } else if(data.message=="error"){
                         alert(data.remark)
