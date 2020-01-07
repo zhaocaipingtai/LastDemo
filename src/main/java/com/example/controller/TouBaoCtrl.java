@@ -88,21 +88,6 @@ public class TouBaoCtrl {
     }
 
     public static void main(String[] args) throws Exception {
-//        String testStr="3cVYmS+aKfNVGcEtGFSFycOJqqoPUwEQp1mga2xliUE=";
-
-
-
-//        byte[] bKey = SM4Util.generateKey();
-//        byte[] sm4 = SM4Util.encrypt_Ecb_Padding(bKey,testStr.getBytes("UTF-8"));
-//        String encData = Base64.encodeBase64String(sm4);
-//        System.out.println("密文：" + encData);
-
-
-//        byte[] bKey = SM4Util.generateKey();
-//        byte[] dd = SM4Util.decrypt_Ecb_Padding(bKey, Base64.decodeBase64(testStr));
-//        String datainfo = new String(dd, "UTF-8");
-//        System.out.println("解密后的原文：" + datainfo);
-
 
         String testStr="/24lmRsOYcrPMMyKxcRXVw==";
         byte[] bKey = SM4Util.generateKey();
@@ -114,30 +99,6 @@ public class TouBaoCtrl {
         System.out.println("解密后的原文：" + datainfo);
     }
 
-//    public static String fapiaoApply() throws Exception {
-//        String key = "eyF5xYB3evZe2Ge+svjKAQ==";
-//        JSONObject object = new JSONObject();
-//        object.put("appkey", "finance_sh");
-//        object.put("timestamp", new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
-//        object.put("applyno", "TBaoHanSH2019112008052940959");
-//        object.put("baohanno", "20191209113251675");
-//        object.put("biddername", "2019-12-31 09:33:25");
-//        object.put("biddercode", key);
-//        object.put("amount", "500");
-//        object.put("projectarea", "320600");// 待定
-//        object.put("capitalsource", "2");// 待定
-//        object.put("projectclass", "2");// 待定
-//        object.put("projectqlfction", "建材");// 待定
-//        TreeMap<String, String> treemap = ValueProcessUtils.convertMap2TreeMap(object);
-//        String sortparam = ValueProcessUtils.convertTreeMap2String(treemap, "&");
-//        sortparam += "&appsecret=eaddb35c-14ed-11ea-9255-b888e3ebf769";
-//        String sm3sign = CommonEncrypt.Sm3Hash(sortparam.getBytes("UTF-8"));
-//        object.put("sign", sm3sign);
-//        String ret = HttpBaseUtil.sendPost("http://114.67.67.163:8069/open/api/insure/baohanrestore", object.toString(),
-//                "application/json");
-//        return ret;
-//        // return "";
-//    }
 
     public JSONObject doPost(String url,String requestData) {
         RestTemplate restTemplate=new RestTemplate();

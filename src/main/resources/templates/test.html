@@ -17,15 +17,15 @@
         $("#button").click(function () {
 
             $.ajax({
-                url:"/tbbx/insurance",
+                url:"/baohanapply",
                 dataType:"json",
                 type:"post",
                 success:function (data) {
                     console.log(JSON.stringify(data));
-                    if(data.remark=="success") {    //请求成功
+                    if(data.code=="1") {    //请求成功
                         window.open(data.redirect_url);
-                    } else if(data.message=="error"){
-                        alert(data.remark)
+                    } else if(data.code=="0"){
+                        console.log(data.remark);
                     }
                 }
             });
