@@ -13,6 +13,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.util.DigestUtils;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -104,42 +105,26 @@ public class TouBaoCtrl {
 
         //发送远程请求
         String url="http://127.0.0.1:7000/tbbx/uapEnter/uapLogin";
-        JSONObject responseJSON = doPost(url, requestData);
+        JSONObject responseJSON = doPost(url, requestData,sign,appkey);
         return responseJSON;
 
     }
 
-    public static void main(String[] args) throws Exception {
-//        String appsecret = "ba22726d-14aa-11ea-9b2d-b888e3ebf769";
-        String demo="crxylh";
-//        byte[] bKey = SM4Util.generateKey();
-        String bKey="169b909483f5822975d316b6676b0a0a";
-        byte[] sm4 = SM4Util.encrypt_Ecb_Padding(ByteUtils.fromHexString(bKey),demo.getBytes("UTF-8"));
-        String encData = Base64.encodeBase64String(sm4);
-        System.out.println("密文：" + encData);
-        byte[] dd = SM4Util.decrypt_Ecb_Padding(ByteUtils.fromHexString(bKey), Base64.decodeBase64(encData));
-        String datainfo = new String(dd, "UTF-8");
-        System.out.println("解密后的原文：" + datainfo);
-
-        //对demo进行签名
-//        demo+="&appsecret="+appsecret;
-        byte[] signHash= SM3Util.hash(demo.getBytes("UTF-8"));
-        StringBuilder signature = new StringBuilder();
-        for (byte b : signHash) {
-            signature.append(byteToHexString(b));
-        }
-        String sign=signature.toString();
-        System.out.println("签名String值为：" + sign);
-
-        //验签
-
-    }
 
 
-    public JSONObject doPost(String url,String requestData) {
+    public static JSONObject doPost(String url,String requestData,String sign,String appkey) {
         RestTemplate restTemplate=new RestTemplate();
         HttpHeaders headers=new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
+        headers.set("APPID",appkey);
+        headers.set("APPSECRET","123456");
+        headers.set("TRAN_ID","test");
+        String time = String.valueOf(new Date().getTime()) ;
+        headers.set("TIMESTAMP",time);
+        //对请求头进行签名
+        String signs = verify(appkey, "123456", "test", time);
+
+        headers.set("APP_SIGN",signs);
         MultiValueMap<String,String> map=new LinkedMultiValueMap<>();
         map.add("requestData",requestData);
         HttpEntity<MultiValueMap<String,String>> httpEntity=new HttpEntity<>(map,headers);
@@ -147,6 +132,24 @@ public class TouBaoCtrl {
         String body = responseEntity.getBody();
         JSONObject jsonObject = JSONObject.parseObject(body);
         return jsonObject;
+    }
+
+    /**
+    * @Description 对请求头进行签名
+    * @Date 2020/1/10 16:00
+    * @return
+    * @Author FanJiangFeng
+    * @Version1.0
+    * @History
+    */
+    public static String verify(String appid,String appsecret,String tran_id,String timestamp){
+        JSONObject jo = new JSONObject();
+        jo.put("APPID",appid);
+        jo.put("APPSECRET",appsecret);
+        jo.put("TRAN_ID",tran_id);
+        jo.put("TIMESTAMP",timestamp);
+        String encode = DigestUtils.md5DigestAsHex(jo.toString().getBytes());
+        return encode;
     }
 
     public static String byteToHexString(byte ib) {
