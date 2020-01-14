@@ -159,7 +159,7 @@ public class InsuranceCtrl {
      */
     public String getContentData(String responseData){
         JSONObject jsonObject = JSONObject.parseObject(responseData);
-        Integer status = (Integer) jsonObject.get("status");
+        Integer status =  Integer.parseInt(jsonObject.getString("status"));
         String message = (String) jsonObject.get("message");
         if(status==1000){
             JSONObject jsonObject1=(JSONObject) jsonObject.get("content");
