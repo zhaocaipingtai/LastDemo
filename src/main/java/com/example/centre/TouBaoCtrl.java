@@ -104,7 +104,7 @@ public class TouBaoCtrl {
         String requestData = sendRequestData.toJSONString();
 
         //发送远程请求
-        String url="http://127.0.0.1:7000/tbbx/uapEnter/uapLogin";
+        String url="http://127.0.0.1:7000/tbbx/uapLogin";
         JSONObject responseJSON = doPost(url, requestData,sign,appkey);
         return responseJSON;
 
