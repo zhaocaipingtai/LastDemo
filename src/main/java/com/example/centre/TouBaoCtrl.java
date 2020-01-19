@@ -54,28 +54,28 @@ public class TouBaoCtrl {
     @ResponseBody
     public JSONObject baohanapply() throws Exception{
         //appkey
-        String appkey="001";
+        String appkey="financelazy";
         //请求时间
         long time=new Date().getTime();
         Date times=new Date(time);
         SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String timestamp = format.format(times);
         //业务流水号
-        String applyno="18838030468";
+        String applyno="TBaoHanLAZY2020011717105291729";
         //投标企业名称
-        String biddername="中心集团";
+        String biddername="保函平台专用账号";
         //统一社会信用代码
-        String biddercode="91320582704068740Y";
+        String biddercode="9132058270406874GB";
         //标段编号（密文）
-        String biaoduanno="FXHdgO+ycoenm1+7VW5pvA==";
+        String biaoduanno="LXEdGgpZ/WPHGZEkeTT6Aw==";
         //标段名称(密文)
-        String biaoduanname="z+z7s7O6JCpKbqFSx3Zthw==";
+        String biaoduanname="9rr0ivZ571xz14qP0uW54w==";
         //保证金金额
-        BigDecimal bzjamount=new BigDecimal(1000.50);
+        BigDecimal bzjamount=new BigDecimal(500000.0);
         //招标人（密文）
-        String zbr="mVyNYMgI+DAPQsJgH6dIvw==";
+        String zbr="OGa+GBQpzc445fWnDE4pww==";
         //招标人统一社会信用代码（密文）
-        String zbrorgnum="Nxl2VeI1Dof6XAz8DfT5yQ==";
+        String zbrorgnum="NPyj/rxxPNQLkZCta5n15xA2CZM+GhCDPrRsui0JtIE=";
         //报文签名
 //        String sign="1feeccb15045c967f5c3bacd895c4ce5ed44b5d287f9a621662e1bf403b7dc21";
         JSONObject sendRequestData=new JSONObject();
@@ -104,7 +104,10 @@ public class TouBaoCtrl {
         String requestData = sendRequestData.toJSONString();
 
         //发送远程请求
+//        String url="http://111.6.186.113:8000/zykb_server/tbbx/uapLogin";
+//        String url="http://192.168.1.21:7000/tbbx/uapLogin";
         String url="http://127.0.0.1:7000/tbbx/uapLogin";
+
         JSONObject responseJSON = doPost(url, requestData,sign,appkey);
         return responseJSON;
 
